@@ -1,0 +1,10 @@
+@mixin hoverable($background, $hover, $focus, $transition: 200ms) {
+  transition: background-color $transition linear;
+  background-color: $background;
+  &:hover {
+    background-color: $hover;
+  }
+  &:focus {
+    background-color: $focus;
+  }
+}

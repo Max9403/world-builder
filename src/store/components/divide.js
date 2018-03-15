@@ -17,7 +17,7 @@ export default {
       type: "number"
     }
   },
-  calculate(item, {left, right}) {
-    return {division: (left || 0) / (right || 0)};
+  calculate(item, {left = 0, right = 1} = {}) {
+    return {division: left / right};
   }
 }

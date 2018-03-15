@@ -2,8 +2,8 @@ export default {
   id: "subtract",
   name: "Subtract",
   outputs: {
-    "diffirence":{
-      id: "diffirence",
+    "difference":{
+      id: "difference",
       type: "number"
     }
   },
@@ -17,7 +17,7 @@ export default {
       type: "number"
     }
   },
-  calculate(item, {left, right}) {
-    return {diffirence: (left || 0) - (right || 0)};
+  calculate(item, {left = 0, right = 0} = {}) {
+    return {difference: left - right};
   }
 }

@@ -7,7 +7,7 @@ export default {
       type: "number"
     }
   },
-  calculate(item, {height}) {
-    return height || 0;
+  calculate(item, {height = 0} = {}) {
+    return height;
   }
 }

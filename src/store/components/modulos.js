@@ -17,7 +17,7 @@ export default {
       type: "number"
     }
   },
-  calculate(item, {left, right}) {
-    return {modulos: (left || 0) % (right || 0)};
+  calculate(item, {left = 0, right = 0} = {}) {
+    return {modulos: left % right};
   }
 }

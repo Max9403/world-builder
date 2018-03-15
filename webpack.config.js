@@ -40,9 +40,9 @@ module.exports = {
                         ["@babel/env", {
                           targets: {
                             node: "current"
-                          },
-                          inlude: ["@babel/transform-spread"]
-                        }]
+                          }
+                        }],
+                        "@babel/flow"
                       ],
                       // plugins: [require('babel-plugin-transform-spread')]
                     }
@@ -52,6 +52,7 @@ module.exports = {
                 test: /\.vue$/,
                 loader: 'vue-loader',
                 options: {
+                    extractCSS: process.env.NODE_ENV === 'production',
                     loaders: {
                         // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
                         // the "scss" and "sass" values for the lang attribute to the right configs here.
